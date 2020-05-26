@@ -1,4 +1,9 @@
+# Mac OSX Files
+.DS_Store
+
+# General Files
 node_modules
-yarn-lock
+npm-debug.log
 package-lock.json
 yarn.lock
+dist

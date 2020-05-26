@@ -1,71 +1,33 @@
 {
-	"extends": [
-		"tslint:recommended",
-		"tslint-react",
-		"tslint:latest",
-		"tslint-config-prettier"
-	],
-	"rulesDirectory": ["tslint-plugin-prettier"],
-	"rules": {
-		"arrow-parens": false,
-		"arrow-return-shorthand": true,
-		"class-name": true,
-		"eofline": true,
-		"prettier": [
-			true,
-			null,
-			{
-				"editorconfig": false
-			}
-		],
-		"indent": [true, "spaces", 2],
-		"linebreak-style": false,
-		"max-line-length": [
-			true,
-			{
-				"ignore-pattern": "^import |^export {(.*?)}",
-				"limit": 100
-			}
-		],
-		"radix": false,
-		"new-parens": true,
-		"no-arg": true,
-		"no-bitwise": true,
-		"no-conditional-assignment": true,
-		"no-consecutive-blank-lines": true,
-		"no-console": true,
-		"no-debugger": true,
-		"no-duplicate-imports": true,
-		"no-duplicate-variable": [true, "check-parameters"],
-		"no-empty": true,
-		"no-empty-interface": false,
-		"no-invalid-template-strings": true,
-		"no-magic-numbers": true,
-		"no-trailing-whitespace": [true, "ignore-comments"],
-		"no-unused-expression": true,
-		"no-var-keyword": true,
-		"no-submodule-imports": false,
-		"object-literal-shorthand": true,
-		"object-literal-sort-keys": false,
-		"object-literal-key-quotes": false,
-		"ordered-imports": true,
-		"prefer-const": true,
-		"prefer-object-spread": true,
-		"prefer-template": true,
-		"trailing-comma": [
-			true,
-			{
-				"multiline": {
-					"objects": "ignore",
-					"arrays": "ignore",
-					"functions": "never",
-					"typeLiterals": "ignore"
-				},
-				"esSpecCompliant": true
-			}
-		],
-		"triple-equals": true,
-		"use-isnan": true,
-		"jsx-boolean-value": ["always", "never"]
-	}
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js",
+      "src/shared/serviceWorker.ts"
+    ]
+  },
+  "rules": {
+    "object-literal-sort-keys": false,
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "lowercase-last",
+        "named-imports-order": "lowercase-first"
+      }
+    ],
+    "jsx-no-lambda": false,
+    "no-console": false,
+    "no-empty-interface": false,
+    "member-ordering": false,
+    "curly": [true, "ignore-same-line"],
+    "max-line-length": [
+      true,
+      {
+        "limit": 100,
+        "ignore-pattern": "^import |^export {(.*?)}|class [a-zA-Z]+ implements |// "
+      }
+    ]
+  }
 }

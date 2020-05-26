@@ -1,1 +1,4 @@
-export { default as LeadDetail } from './components/lead-detail/lead-detail';
+export { FlexContainer } from './components/flex-container/flex-container';
+export { FlexItem } from './components/flex-item/flex-item';
+export { FlexColumn } from './components/flex-column/flex-column';
+export { FlexGridColumn } from './components/flex-grid-column/flex-grid-column';
